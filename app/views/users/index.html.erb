@@ -1,0 +1,34 @@
+<div class="wrapper_wide" id="homec">
+<header class="cf">
+
+    <%= link_to '#', :id => 'logo' do %>
+      <span class="textodelgado">LIBRE</span> ESTUDIO
+    <% end %>
+      <nav class="navu">
+        <ul>
+          <li><a href="categorias.html" class="nav_button">CATEGORIAS</a></li>
+          <li> <%= link_to "LOG OUT", destroy_user_session_path, method: :delete, class:"nav_button"%></li>
+        </ul>
+      </nav>
+</header>
+</div>
+<div class="banner categorias_banner" ></div>
+<div class="cf" id="documento">
+  <div class="wrapper">
+    <ul class="cf">
+      <% @users.each do |user|%>
+        <%= link_to user do%>
+          <li>
+            <img src="images/asd.jpg" alt="" />
+            <div class="user_overview">
+              <h2><%= user.name%> <%=user.last_name%></h2>
+              <p class="document_count">
+                1 Documento
+              </p>
+            </div>
+          </li>
+        <%end%>
+      <%end%>
+    </ul>
+  </div>
+</div>

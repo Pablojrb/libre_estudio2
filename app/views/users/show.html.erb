@@ -1,0 +1,64 @@
+<div class="wrapper_wide" id="homec">
+<header class="cf">
+
+    <%= link_to '#', :id => 'logo' do %>
+      <span class="textodelgado">LIBRE</span> ESTUDIO
+    <% end %>
+      <nav class="navu">
+        <ul>
+          <li><a href="categorias.html" class="nav_button">CATEGORIAS</a></li>
+          <li> <%= link_to "LOG OUT", destroy_user_session_path, method: :delete, class:"nav_button"%></li>
+        </ul>
+      </nav>
+</header>
+</div>
+<div class="banner dashboard_banner" >
+  <div class="avatar"></div>
+    <div class="user_overview">
+          <p>
+            <%= @user.name%> <%= @user.last_name%>
+          </p>
+          <% unless @user.facebook.blank?%>
+            <a href="<%= @user.facebook%>" class="button_edit">Facebook</a>
+          <%end%>
+          <% unless @user.instagram.blank?%>
+            <a href="<%= @user.instagram%>" class="button_edit">instagram</a>
+          <%end%>
+    </div>
+  </div>
+</div>
+
+<div id="breadcrumb">
+  <div class="wrapper_skinny">
+    <%=link_to users_path do%>
+      All Users
+      <span>/</span>
+      Perfil de <span class="textodelgado"><%= @user.name %> <%= @user.last_name %></span>
+    <%end%>
+  </div>
+</div>
+
+<div id="documentos">
+  <div class="wrapper_skinny">
+    <ul class="cf">
+
+        <li class="cf">
+          <div class="documento_thumbnail">
+          </div>
+          <div class="documento_overview">
+            <h2><%= @user.name%></h2>
+            <p class="des_documento">
+            </p>
+          </div>
+        </li>
+
+    </ul>
+  </div>
+</div>
+
+<div class="pagination">
+  <span class="previous_page disiable">Anterior</span>
+  <em class="current">1</em>
+  <a href="#">2</a>
+  <a href="#" class="next_page">Siguiente</a>
+</div>

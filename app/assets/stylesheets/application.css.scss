@@ -91,7 +91,7 @@ body{
   min-width: 4.5rem;
   font-size: 0.75rem;
   background-color: rgba(255, 255, 255, 0.35);
-  font-weight: 600;
+  font-weight: 400;
   text-transform: uppercase;
   &:hover{
     background-color: rgba(255, 255, 255, 0.1);
@@ -164,8 +164,8 @@ body{
 
   margin-bottom: 2rem;
 }
-.categoriasbanner{
-  background-image: url(../img/categoriasbanner.jpg);
+.categorias_banner{
+  background-image: image-url("categoriasbanner.jpg");
 }
 .document_showbanner{
     background-image: image-url("unidadesbanner.jpg");
@@ -237,6 +237,7 @@ body{
   border-bottom: 1px solid lighten($lgray, 15%);
   font-weight: 700;
   font-size: .7rem;
+  margin-bottom: 2.5rem;
   a{
     text-decoration: none;
     color: $lgray;
@@ -341,3 +342,4 @@ textarea{
 }
 @import "normalize";
 @import "welcome";
+@import "users";
