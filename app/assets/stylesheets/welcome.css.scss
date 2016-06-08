@@ -1,0 +1,68 @@
+#contenido{
+    float: left;
+    text-align: left;
+    h1 {
+      color: $grayb;
+
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+      margin: 5rem 0 3rem 0;
+
+    }
+    #warning{
+      text-align: center;
+      font-size: .6rem;
+      color: $grayb;
+      font-weight: 100;
+      display: block;
+      margin: 0 auto;
+
+
+    }
+}
+#desproyecto{
+  color:$grayb;
+  line-height:1.85rem;
+  font-size: .95rem;
+  font-weight: 600;
+}
+
+#logo_wrapper{
+  width: 300px;
+  height: 300px;
+  margin: 7rem 0 2rem 0;
+  display: inline;
+  background-image: image-url("logobg.png");
+  background-size: cover;
+  background-position: center;
+  float: right;
+}
+
+#homec{
+  header{
+    padding: 3rem 0;
+    #logo{
+      float: left;
+      text-transform: uppercase;
+      color: $grayb;
+      text-decoration: none;
+      font-weight: bold;
+      letter-spacing: .15rem;
+    }
+  }
+}
+
+.button{
+  margin: 5rem 2.5% 0 2.5%;
+
+}
+.button_show{
+  display: inline-block;
+  margin: 5rem auto 1rem auto;
+}
+.button_home{
+  display: inline-block;
+  min-width: 11.5rem;
+  margin: 5rem auto 0rem auto;
+
+}
