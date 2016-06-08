@@ -1,29 +1,52 @@
-<h2>Sign up</h2>
+<div class="wrapper_wide" id="homec">
+  <header class="cf" id="sign_header">
+     <h1><span class="textodelgado">LIBRE</span> ESTUDIO</h1>
+  </header>
+</div>
+<div class="hr wrapper_wide">
+  <span></span>
+    Regístrate es gratis y lo será siempre
+  <span></span>
+</div>
+<div id="form">
+  <div class="wrapper_skinny">
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+      <div class="field">
+        <%= f.text_field :name, placeholder: 'Primer Nombre' ,autofocus: true %>
+      </div>
+
+      <div class="field">
+        <%= f.text_field :last_name, placeholder: 'Apellido'%>
+      </div>
+
+      <div class="field">
+        <%= f.email_field :email, placeholder: 'Email' %>
+      </div>
+
+      <div class="field">
+        <%= f.password_field :password, placeholder: 'Password' ,autocomplete: "off" %>
+      </div>
+
+      <div class="field">
+        <%= f.password_field :password_confirmation, placeholder: 'Password Confirmation' ,autocomplete: "off" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Regístrate", class: "button button_sing_up button_highlight" %>
+      </div>
+    <% end %>
+
   </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+  <div class="terms wrapper_skinny">
+    <p>
+      Al registrate aceptas los <span class="textodelgado"><a href="#">Terminos de uso</a></span> de este servicio
+    </p>
   </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  <div class="wrapper_skinny" id="shared_links">
+    Ya tiene una <span class="textongrueso">Cuenta</span>? <%= render "devise/shared/links" %>
   </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+  <div class="imgsign-up"> </div>
