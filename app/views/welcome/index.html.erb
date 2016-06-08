@@ -3,11 +3,12 @@
     <a href="#" id="logo"> <span class="textodelgado">LIBRE</span> ESTUDIO</a>
       <nav class="navu">
         <ul>
-          <li><%= link_to "LOG IN",  class:"nav_button" %></li>
-
+          <% unless user_signed_in? %>
+            <li><%= link_to "LOG IN", new_user_session_path, class:"nav_button" %></li>
+          <% else %>
             <li><a href="#" class="nav_button">DASHBOARD</a></li>
-            <li> <%= link_to "LOG OUT",  class:"nav_button"%></li>
-
+            <li> <%= link_to "LOG OUT", destroy_user_session_path, method: :delete, class:"nav_button"%></li>
+          <% end %>
         </ul>
       </nav>
 
@@ -24,8 +25,13 @@
       <span class="textodelgado">(I.U.T.I.R.L.A)</span>.
     </p>
     <div class="wrapper_wide">
-      <a href="#" class="button button_highlight button_home">Regístrate</a>
-      <a href="#" class="button button_highlight button_home">Explora</a>
+      <% unless user_signed_in?%>
+        <%= link_to "Regístrate", new_user_registration_path, class:"button button_highlight button_home " %>
+        <%= link_to "Explora", "#", class:"button button_highlight button_home"%>
+
+      <%else%>
+      <%= link_to "Explora", '#',class:"button button_highlight button_block"%>
+      <%end%>
 
     </div>
     <div id="warning" class="wrapper_wide">
