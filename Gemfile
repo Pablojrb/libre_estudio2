@@ -23,8 +23,7 @@ group :development do
 
 end
 group :develompment do
-  gem 'sqlite3', '1.3.11'
-
+gem 'sqlite3', '~> 1.3', '>= 1.3.11'
 
 end
 group :production do
