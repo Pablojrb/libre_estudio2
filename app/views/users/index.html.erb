@@ -6,8 +6,15 @@
     <% end %>
       <nav class="navu">
         <ul>
-          <li><a href="categorias.html" class="nav_button">CATEGORIAS</a></li>
-          <li> <%= link_to "LOG OUT", destroy_user_session_path, method: :delete, class:"nav_button"%></li>
+          <% unless user_signed_in?%>
+            <li> <%= link_to "LOG IN", new_user_session_path, class:"nav_button"%></li>
+
+          <%else%>
+            <li> <%= link_to "EXPLORA", users_path, class:"nav_button"%></li>
+            <li> <%= link_to "DASHBOARD", "#", class:"nav_button"%></li>
+            <li> <%= link_to "LOG OUT", destroy_user_session_path, method: :delete, class:"nav_button"%></li>
+
+          <%end%>
         </ul>
       </nav>
 </header>

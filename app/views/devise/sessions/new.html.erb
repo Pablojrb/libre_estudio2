@@ -19,7 +19,7 @@
       </div>
       <% if devise_mapping.rememberable? -%>
         <div class="field textodelgado ltext">
-          <%= f.check_box :remember_me %>
+          <%= f.check_box :remember_me, (resource.remember_me ? {} : { checked: true }) %>
           <%= f.label :remember_me %>
         </div>
       <% end -%>
@@ -34,7 +34,7 @@
     </p>
   </div>
   <div class="wrapper_skinny" id="shared_links">
-  <%= render "devise/shared/links" %>
+  <%=render "devise/shared/links" %>
   </div>
 </div>
   <div class="imgsign-up"> </div>

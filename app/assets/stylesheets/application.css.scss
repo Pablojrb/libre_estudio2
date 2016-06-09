@@ -8,6 +8,12 @@ body{
 
   font-family: 'Open Sans', sans-serif;
 }
+
+.colorgray{
+  color: $lgray;
+  font-size: .85rem;
+  margin: auto .85rem;
+}
 .hr{
   color: $lgray;
   font-size: .8rem;
@@ -98,6 +104,12 @@ body{
 
   }
 
+}
+.button_new{
+  min-width: 8.5rem;
+  width: 5.5rem;
+  display: block;
+  margin: 5rem auto 0 auto !important;
 }
 .button_sing_up{
   display: block;
@@ -235,12 +247,15 @@ body{
   padding: 1rem 0;
   text-align: center;
   border-bottom: 1px solid lighten($lgray, 15%);
-  font-weight: 700;
-  font-size: .7rem;
+  font-weight: 400;
+  font-size: .85rem;
   margin-bottom: 2.5rem;
   a{
     text-decoration: none;
-    color: $lgray;
+    color: $grayb;
+    &:hover{
+      color: $lgray;
+    }
   }
   span{
     margin: 0 1rem;
@@ -305,24 +320,27 @@ textarea{
   padding: 1rem 0 2rem 0;
 }
 #links{
+  margin-bottom: 4rem;
+
   ul{
     list-style: none;
-    margin-bottom: 4rem;
-    padding: 3rem 0;
+    margin-bottom: 1rem;
+    padding: 2rem 0 .85rem 0;
     border-bottom: 1px solid lighten($lgray, 15%);
 
 
     li{
       display: inline;
       margin-right: 1rem;
-      font-weight: 600;
+      font-weight: 400;
       .current{
-        color: $lgray;
+      color: $lgray;
       }
 
       a{
         color: $grayb;
         text-decoration: none;
+        font-size: .85rem;
 
         &:hover{
           color: $lgray;
@@ -343,3 +361,4 @@ textarea{
 @import "normalize";
 @import "welcome";
 @import "users";
+@import "documents";

@@ -27,7 +27,7 @@
     <div class="wrapper_wide">
       <% unless user_signed_in?%>
         <%= link_to "Regístrate", new_user_registration_path, class:"button button_highlight button_home " %>
-        <%= link_to "Explora", "#", class:"button button_highlight button_home"%>
+        <%= link_to "Explora", users_path, class:"button button_highlight button_home"%>
 
       <%else%>
       <%= link_to "Explora", users_path,class:"button button_highlight button_block"%>

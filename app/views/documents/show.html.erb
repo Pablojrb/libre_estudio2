@@ -42,31 +42,49 @@
     <%=link_to users_path do%>
       All Users
       <span>/</span>
-      Perfil de <span class="textodelgado"><%= @user.name %> <%= @user.last_name %></span>
+
+      <%=link_to user_path(@user)do%>
+       Perfil de <span class="textodelgado"><%= @user.name %> <%= @user.last_name %></span>
+      <%end%>
+      <span>/</span>
+      <span class="textodelgado"><%= @document.title %> </span>
     <%end%>
   </div>
 </div>
-
-
-
+<div id="unidades" class="wrapper ">
+  <div class="wapper_skinny">
+    <ul class="cf">
+        <li class="cf">
+          <div class="documento_thumbnail">
+          </div>
+          <div class="documento_overview">
+            <h2><%= @document.title%></h2>
+            <p class="des_documento">
+              <%=@document.description%>
+            </p>
+          </div>
+        </li>
+  </div>
+</div>
 <div id="documentos">
   <div class="wrapper_skinny">
     <ul class="cf">
-        <% @documents.each do |document|%>
-          <li class="cf">
-            <div class="documento_thumbnail">
-            </div>
-            <div class="documento_overview">
-              <h2><%= link_to document.title, user_document_path(@user, document)%></h2>
-              <p class="des_documento">
-                <%=truncate(document.description, length:150)%>
-              </p>
-            </div>
-          </li>
-        <%end%>
+      <% @documents.each do |document|%>
+        <li class="cf">
+          <div class="documento_thumbnail">
+          </div>
+          <div class="documento_overview">
+            <h2><%= link_to document.title, user_document_path(@user, document)%></h2>
+            <p class="des_documento">
+              <%=truncate(document.description, length:150)%>
+            </p>
+          </div>
+        </li>
+      <%end%>
     </ul>
   </div>
 </div>
+
 
 <div class="pagination">
   <span class="previous_page disiable">Anterior</span>

@@ -32,11 +32,14 @@
   <div class="wrapper_skinny">
     <ul>
       <li><a href="#">Documentos</a></li>
-      <li><a href="#">Subir documento</a></li>
+      <span class="colorgray">/</span>
+      <li><%= link_to "Subir Documento",  new_user_document_path( @user ) %></li>
+      <span class="colorgray">/</span>
       <li><%= link_to "Account Settings", edit_user_registration_path, class:"current" %></li>
+
     </ul>
   </div>
-</div>
+
 
 <div id="form">
   <div class="wrapper_skinny">

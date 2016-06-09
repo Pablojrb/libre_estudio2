@@ -1,0 +1,61 @@
+<div class="wrapper_wide" id="homec">
+<header class="cf">
+
+    <%= link_to '#', :id => 'logo' do %>
+      <span class="textodelgado">LIBRE</span> ESTUDIO
+    <% end %>
+      <nav class="navu">
+        <ul>
+          <li> <%= link_to "EXPLORA", users_path, class:"nav_button"%></li>
+          <li> <%= link_to "LOG OUT", destroy_user_session_path, method: :delete, class:"nav_button"%></li>
+        </ul>
+      </nav>
+</header>
+</div>
+<div class="banner dashboard_banner" >
+  <div class="avatar"></div>
+  <div class="user_overview">
+      <p>
+        <%= @user.name%> <%= @user.last_name%>
+      </p>
+          <%unless @user.facebook.blank?%>
+            <a href="<%=@user.facebook%>", class=" button_edit">Facebook</a>
+          <%end%>
+          <%unless @user.instagram.blank?%>
+            <a href="<%=@user.instagram%>", class=" button_edit">Instagram</a>
+          <%end%>
+  </div>
+</div>
+<div id="links">
+  <div class="wrapper_skinny">
+    <ul>
+      <li><a href="#">Documentos</a></li>
+      <span class="colorgray">/</span>
+      <li><%= link_to "Subir Documento",  new_user_document_path, class:"current" %></li>
+      <span class="colorgray">/</span>
+      <li><%= link_to "Account Settings", edit_user_registration_path %></li>
+
+    </ul>
+  </div>
+</div>
+<div class="hr wrapper_skinny">
+  <span> </span>
+      Comparte!
+  <span></span>
+</div>
+<div id="form">
+  <div class="wrapper_skinny">
+    <%= form_for ([@user, @document]) do |f| %>
+      <div class="field">
+        <%= f.text_field :title, placeholder:"Titulo del pdf"%>
+      </div>
+
+      <div class="field">
+        <%= f.text_area :description, placeholder:"Descripcion del pdf"%>
+      </div>
+      <div class="actions">
+        <%= f.submit "Subir", class: "button button_new button_highlight" %>
+      </div>
+    <%end%>
+  </div>
+</div>
