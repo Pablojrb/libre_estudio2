@@ -29,9 +29,9 @@
 <div id="links">
   <div class="wrapper_skinny">
     <ul>
-      <li><a href="#">Documentos</a></li>
+      <li><%= link_to "Documentos", root_path%></li>
       <span class="colorgray">/</span>
-      <li><%= link_to "Subir Documento",  new_user_document_path, class:"current" %></li>
+      <li> <a href="#" class="current">Subir Documento</a></li>
       <span class="colorgray">/</span>
       <li><%= link_to "Account Settings", edit_user_registration_path %></li>
 

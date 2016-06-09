@@ -1,7 +1,7 @@
 <div class="wrapper_wide" id="homec">
 <header class="cf">
 
-    <%= link_to '#', :id => 'logo' do %>
+    <%= link_to root_path, :id => 'logo' do %>
       <span class="textodelgado">LIBRE</span> ESTUDIO
     <% end %>
       <nav class="navu">
@@ -31,11 +31,11 @@
 <div id="links">
   <div class="wrapper_skinny">
     <ul>
-      <li><a href="#">Documentos</a></li>
+      <li><%= link_to "Documentos", root_path%></li>
       <span class="colorgray">/</span>
       <li><%= link_to "Subir Documento",  new_user_document_path( @user ) %></li>
       <span class="colorgray">/</span>
-      <li><%= link_to "Account Settings", edit_user_registration_path, class:"current" %></li>
+      <li><a href="#" class="current">Account Settings</a></li>
 
     </ul>
   </div>
