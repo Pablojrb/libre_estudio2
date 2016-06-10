@@ -1,6 +1,6 @@
 class DocumentsController < ApplicationController
   before_action :find_user
-  before_action :find_document, only: [:show]
+  before_action :find_document, only: [:show, :edit, :update, :destroy]
 
   def new
     @document = @user.documents.new
@@ -16,6 +16,21 @@ class DocumentsController < ApplicationController
   end
   def show
     @documents = Document.where(user_id: @user).order("created_at DESC").reject { |d| d.id == @document.id }
+  end
+  def edit
+
+  end
+  def update
+    if @document.update document_params
+      redirect_to user_document_path(@user, @document), notice: "el documento fue editado con exito!"
+    else
+      render 'edit'
+    end
+  end
+  def destroy
+    @document.destroy
+    redirect_to root_path
+
   end
 
   private

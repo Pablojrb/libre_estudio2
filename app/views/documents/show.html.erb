@@ -12,7 +12,7 @@
 
             <%else%>
               <li> <%= link_to "EXPLORA", users_path, class:"nav_button"%></li>
-              <li> <%= link_to "DASHBOARD", "#", class:"nav_button"%></li>
+              <li> <%= link_to "DASHBOARD", root_path, class:"nav_button"%></li>
               <li> <%= link_to "LOG OUT", destroy_user_session_path, method: :delete, class:"nav_button"%></li>
 
             <%end%>
@@ -42,12 +42,8 @@
     <%=link_to users_path do%>
       All Users
       <span>/</span>
-
-      <%=link_to user_path(@user)do%>
        Perfil de <span class="textodelgado"><%= @user.name %> <%= @user.last_name %></span>
-      <%end%>
-      <span>/</span>
-      <span class="textodelgado"><%= @document.title %> </span>
+      <a href="#"><span>/</span><span class="textodelgado"><%= @document.title %> </span></a>
     <%end%>
   </div>
 </div>

@@ -5,9 +5,6 @@
         <ul>
           <% unless user_signed_in? %>
             <li><%= link_to "LOG IN", new_user_session_path, class:"nav_button" %></li>
-          <% else %>
-            <li><a href="#" class="nav_button">DASHBOARD</a></li>
-            <li> <%= link_to "LOG OUT", destroy_user_session_path, method: :delete, class:"nav_button"%></li>
           <% end %>
         </ul>
       </nav>

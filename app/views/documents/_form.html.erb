@@ -1,0 +1,16 @@
+<div id="form">
+  <div class="wrapper_skinny">
+    <%= form_for ([@user, @document]) do |f| %>
+      <div class="field">
+        <%= f.text_field :title, placeholder:"Titulo del pdf"%>
+      </div>
+
+      <div class="field">
+        <%= f.text_area :description, placeholder:"Descripcion del pdf"%>
+      </div>
+      <div class="actions">
+        <%= f.submit class: "button button_new button_highlight" %>
+      </div>
+    <%end%>
+  </div>
+</div>

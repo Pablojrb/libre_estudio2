@@ -11,7 +11,7 @@
 
           <%else%>
             <li> <%= link_to "EXPLORA", users_path, class:"nav_button"%></li>
-            <li> <%= link_to "DASHBOARD", "#", class:"nav_button"%></li>
+            <li> <%= link_to "DASHBOARD", root_path, class:"nav_button"%></li>
             <li> <%= link_to "LOG OUT", destroy_user_session_path, method: :delete, class:"nav_button"%></li>
 
           <%end%>
