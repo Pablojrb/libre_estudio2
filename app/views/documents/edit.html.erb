@@ -19,10 +19,10 @@
         <%= @user.name%> <%= @user.last_name%>
       </p>
           <%unless @user.facebook.blank?%>
-            <a href="<%=@user.facebook%>", class=" button_edit">Facebook</a>
+            <a href="<%=@user.facebook%>", class=" button_edit" target="_blank">Facebook</a>
           <%end%>
           <%unless @user.instagram.blank?%>
-            <a href="<%=@user.instagram%>", class=" button_edit">Instagram</a>
+            <a href="<%=@user.instagram%>", class=" button_edit" target="_blank">Instagram</a>
           <%end%>
   </div>
 </div>

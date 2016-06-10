@@ -25,8 +25,7 @@
     <ul class="cf">
       <% @users.each do |user|%>
         <%= link_to user do%>
-          <li>
-            
+          <li>            
             <%=image_tag user.avatar.url(:medium)%>
             <div class="user_overview">
               <h2><%= user.name%> <%=user.last_name%></h2>
