@@ -1,6 +1,6 @@
 class DocumentsController < ApplicationController
   before_action :authenticate_user!, except: [:show]
-  before_filter :require_permission
+  before_filter :require_permission, only: [:new, :edit]
   before_action :find_user
   before_action :find_document, only: [:show, :edit, :update, :destroy]
 

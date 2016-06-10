@@ -4,7 +4,11 @@ class UsersController < ApplicationController
 
 
   def index
-    @users = User.all.order("created_at DESC").reject { |u| u.id == current_user.id }
+    if user_signed_in?
+      @users = User.all.order("created_at DESC").reject { |u| u.id == current_user.id }
+    else
+      @users = User.all.order("created_at DESC")
+    end
   end
 
   def show
