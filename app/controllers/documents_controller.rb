@@ -1,4 +1,6 @@
 class DocumentsController < ApplicationController
+  before_action :authenticate_user!, except: [:show]
+  before_filter :require_permission
   before_action :find_user
   before_action :find_document, only: [:show, :edit, :update, :destroy]
 
@@ -45,5 +47,12 @@ class DocumentsController < ApplicationController
 
   def find_document
     @document = Document.find(params[:id])
+  end
+
+  def require_permission
+    @user = User.find(params[:user_id])
+    if current_user != @user
+      redirect_to root_path, notice: "Lo sentimos, no tienes permiso de ver esa pagina"
+    end
   end
 end
