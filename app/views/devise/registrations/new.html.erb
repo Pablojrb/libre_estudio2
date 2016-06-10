@@ -25,6 +25,14 @@
       <div class="field">
         <%= f.email_field :email, placeholder: 'Email' %>
       </div>
+      <div class="hr wrapper_wide">
+        <span></span>
+          Avatar
+        <span></span>
+      </div>
+      <div class="field">
+        <%= f.file_field :avatar%>
+      </div>
 
       <div class="field">
         <%= f.password_field :password, placeholder: 'Password' ,autocomplete: "off" %>

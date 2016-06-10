@@ -19,18 +19,19 @@
   </header>
 </div>
 <div class="banner dashboard_banner" >
-  <div class="avatar"></div>
-    <div class="user_overview">
-          <p>
-            <%= @user.name%> <%= @user.last_name%>
-          </p>
-          <% unless @user.facebook.blank?%>
-            <a href="<%= @user.facebook%>" class="button_edit">Facebook</a>
-          <%end%>
-          <% unless @user.instagram.blank?%>
-            <a href="<%= @user.instagram%>" class="button_edit">instagram</a>
-          <%end%>
-    </div>
+  <div class="avatar">
+  </div>
+  <div class="user_overview">
+        <p>
+          <%= @user.name%> <%= @user.last_name%>
+        </p>
+        <% unless @user.facebook.blank?%>
+          <a href="<%= @user.facebook%>" class="button_edit">Facebook</a>
+        <%end%>
+        <% unless @user.instagram.blank?%>
+          <a href="<%= @user.instagram%>" class="button_edit">instagram</a>
+        <%end%>
+  </div>
   </div>
 </div>
 
