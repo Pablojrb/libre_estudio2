@@ -3,10 +3,10 @@
   padding-bottom: 3rem;
   text-align: center;
   display: block;
-  h2  {
+  h1  {
     text-align: center;
     color: $grayb;
-    font-weight: 600;
+    font-weight: 400;
   }
   ul{
     list-style: none;
@@ -83,15 +83,6 @@
             text-decoration: none;
             color:$grayb;
             font-weight: 600;
-          }
-        }
-        .authorized_links{
-          font-weight: 600;
-          font-size: .8rem;
-          a{
-            text-decoration: none;
-            color: $lgray;
-            margin-right: 1rem;
           }
         }
       }

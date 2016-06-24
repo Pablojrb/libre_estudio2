@@ -41,7 +41,7 @@
 </div>
 
 <div id="breadcrumb">
-  <div class="wrapper_skinny">
+  <div class="wrapper">
     <%=link_to users_path do%>
       All Users
       <span>/</span>
@@ -57,10 +57,15 @@
           <div class="documento_thumbnail">
           </div>
           <div class="documento_overview">
-            <h2><%= @document.title%></h2>
+            <h1><%= @document.title%></h1>
             <p class="des_documento">
               <%=@document.description%>
             </p>
+            <% if user_signed_in?%>
+            <div class="authorized_links">
+              <%= link_to "DESCARGAR"%>
+            </div>
+            <%end%>
           </div>
         </li>
   </div>
@@ -70,8 +75,7 @@
     <ul class="cf">
       <% @documents.each do |document|%>
         <li class="cf">
-          <div class="documento_thumbnail">
-          </div>
+          <div class="documento_thumbnail"></div>
           <div class="documento_overview">
             <h2><%= link_to document.title, user_document_path(@user, document)%></h2>
             <p class="des_documento">

@@ -24,7 +24,7 @@ class DocumentsController < ApplicationController
   end
   def update
     if @document.update document_params
-      redirect_to user_document_path(@user, @document), notice: "el documento fue editado con exito!"
+      redirect_to user_document_path(@user, @document), notice: "El Documento fue editado con EXITO!"
     else
       render 'edit'
     end

@@ -21,14 +21,12 @@
       <p>
         <%= @user.name%> <%= @user.last_name%>
       </p>
-
-          <%unless @user.facebook.blank?%>
-            <a href="<%=@user.facebook%>", class=" button_edit">Facebook</a>
-          <%end%>
-          <%unless @user.instagram.blank?%>
-            <a href="<%=@user.instagram%>", class=" button_edit">Instagram</a>
-          <%end%>
-
+      <%unless @user.facebook.blank?%>
+        <a href="<%=@user.facebook%>", class=" button_edit">Facebook</a>
+      <%end%>
+      <%unless @user.instagram.blank?%>
+        <a href="<%=@user.instagram%>", class=" button_edit">Instagram</a>
+      <%end%>
   </div>
 </div>
 <div id="links">
@@ -39,7 +37,6 @@
       <li><%= link_to "Subir Documento",  new_user_document_path( @user ) %></li>
       <span class="colorgray">/</span>
       <li><a href="#" class="current">Account Settings</a></li>
-
     </ul>
   </div>
 

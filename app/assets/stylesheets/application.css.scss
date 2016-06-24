@@ -9,6 +9,7 @@ body{
   font-family: 'Open Sans', sans-serif;
 }
 #notice_wrapper{
+
   position: absolute;
   top: 0;
   width: 100%;
@@ -86,6 +87,10 @@ body{
   min-width: 5.5rem;
   text-align: center;
   font-weight: 400;
+  a{
+    text-decoration: none;
+    color: $white;
+  }
 
 }
 .button_highlight{
@@ -179,6 +184,34 @@ body{
   letter-spacing: .15rem;
   display: inline;
   margin-left: 15%;
+}
+.authorized_links{
+  font-weight: 600;
+  font-size: .8rem;
+  margin-top: 2rem;
+
+
+  a{
+    background-color: $white;
+    text-decoration: none;
+    color: $lgray;
+    margin-right: 1rem;
+    border: 2px solid $lgray;
+    padding: .55rem;
+    border-radius: 12%;
+    transition: background .2s ease-in-out;
+
+  }
+  &:hover{
+
+      a{
+
+        color:$white;
+        background-color: $lgraya;
+      }
+
+    
+  }
 }
 .banner{
   background-repeat: no-repeat;
