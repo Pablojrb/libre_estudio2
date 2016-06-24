@@ -400,7 +400,10 @@ textarea{
   margin: 0 auto;
 }
 .votes{
-  margin-top: 2rem;
+
+  border-top: 1px solid lighten($lgray, 15%);
+  padding-top: 1rem;
+  margin-top: 1rem;
   span{
     color: $lgray;
     font-size: .85rem;

@@ -45,6 +45,20 @@
                 </div>
                 <%end%>
               </div>
+              <%else%>
+              <div class="votes">
+                <%= link_to "#", class:"like" do%>
+                <svg id="happyface"></svg>
+                <span><%=user.get_upvotes.size%></span>
+                <%end%>
+                <%= link_to "#", class:"unlike" do %>
+
+                <div id="unlikevotes">
+                  <svg id="sadface"></svg>
+                  <span><%=user.get_downvotes.size%></span>
+                </div>
+                <%end%>
+              </div>
               <%end%>
             </div>
           </li>
