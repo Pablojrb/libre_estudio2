@@ -8,6 +8,7 @@ body{
 
   font-family: 'Open Sans', sans-serif;
 }
+
 #notice_wrapper{
 
   position: absolute;
@@ -52,10 +53,6 @@ body{
     font-size: 2rem;
     text-align: center;
 }
-
-
-
-
 .wrapper_wide {
   width: 90%;
   margin: 0 auto;
@@ -189,8 +186,6 @@ body{
   font-weight: 600;
   font-size: .8rem;
   margin-top: 2rem;
-
-
   a{
     background-color: $white;
     text-decoration: none;
@@ -200,17 +195,10 @@ body{
     padding: .55rem;
     border-radius: 12%;
     transition: background .2s ease-in-out;
-
-  }
-  &:hover{
-
-      a{
-
-        color:$white;
-        background-color: $lgraya;
-      }
-
-    
+    &:hover{
+      color:$white;
+      background-color: $lgraya;
+    }
   }
 }
 .banner{
@@ -260,6 +248,9 @@ body{
   line-height: 1rem;
   font-weight: 400;
   letter-spacing: 0.05rem;
+  a{
+    text-decoration: none;
+  }
 }
 .pagination{
   text-align: center;
@@ -407,6 +398,54 @@ textarea{
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0 auto;
+}
+.votes{
+  margin-top: 2rem;
+  span{
+    color: $lgray;
+    font-size: .85rem;
+    vertical-align: 10px;
+    }
+  .like{
+    text-decoration: none;
+    color: $grayb;
+    display: inline-block;
+    #happyface{
+      opacity: .12;
+      background-image: image-url("emoji-happy.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      transition: opacity .2s ease-in-out;
+      &:hover{
+        opacity: .20;
+
+      }
+    }
+  }
+}
+#unlikevotes{
+  float: right;
+}
+#sadface{
+
+  opacity: .12;
+  background-image: image-url("emoji-sad.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  transition: opacity .2s ease-in-out;
+  &:hover{
+    opacity: .20;
+
+  }
+
 }
 @import "normalize";
 @import "welcome";
