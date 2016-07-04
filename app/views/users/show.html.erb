@@ -64,9 +64,4 @@
   </div>
 </div>
 
-<div class="pagination">
-  <span class="previous_page disiable">Anterior</span>
-  <em class="current">1</em>
-  <a href="#">2</a>
-  <a href="#" class="next_page">Siguiente</a>
-</div>
+<%= will_paginate @documents, previous_label: "Anterior", next_label: "Siguiente" %>

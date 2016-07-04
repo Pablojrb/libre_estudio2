@@ -18,6 +18,8 @@ class DocumentsController < ApplicationController
   end
   def show
     @documents = Document.where(user_id: @user).order("created_at DESC").reject { |d| d.id == @document.id }
+    @documents = @documents.paginate(:page => params[:page], :per_page => 5)
+
   end
   def edit
 
