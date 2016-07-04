@@ -8,6 +8,9 @@
       <div class="field">
         <%= f.text_area :description, placeholder:"Descripcion del pdf"%>
       </div>
+      <div class="field">
+        <%= f.file_field :pdf, placeholder:"Sube el PDF"%>
+      </div>
       <div class="actions">
         <%= f.submit class: "button button_new button_highlight" %>
       </div>

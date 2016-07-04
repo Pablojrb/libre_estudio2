@@ -24,7 +24,6 @@ class UsersController < ApplicationController
   def downvote
     @user.downvote_from current_user
     redirect_to users_path
-
   end
 
   private

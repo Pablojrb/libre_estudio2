@@ -415,13 +415,13 @@ textarea{
     display: inline-block;
     #happyface{
       opacity: .12;
-      background-image: image-url("emoji-happy.svg");
+      background-image: image-url("thumbs-up.svg");
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
       display: inline-block;
-      width: 2rem;
-      height: 2rem;
+      width: 1.75rem;
+      height: 1.75rem;
       transition: opacity .2s ease-in-out;
       &:hover{
         opacity: .20;
@@ -436,13 +436,13 @@ textarea{
 #sadface{
 
   opacity: .12;
-  background-image: image-url("emoji-sad.svg");
+  background-image: image-url("thumbs-down.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   display: inline-block;
-  width: 2rem;
-  height: 2rem;
+  width: 1.75rem;
+  height: 1.75rem;
   transition: opacity .2s ease-in-out;
   &:hover{
     opacity: .20;
