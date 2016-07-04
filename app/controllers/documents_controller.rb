@@ -1,4 +1,5 @@
 class DocumentsController < ApplicationController
+  require 'will_paginate/array'
   before_action :authenticate_user!, except: [:show]
   before_filter :require_permission, only: [:new]
   before_action :find_user
