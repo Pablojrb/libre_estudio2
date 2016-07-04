@@ -63,7 +63,7 @@
             </p>
             <% if user_signed_in?%>
             <div class="authorized_links">
-              <%= link_to "DESCARGAR"%>
+              <%= link_to "DESCARGAR", @document.pdf.url(:original, false), :target => "_blank"%>
             </div>
             <%end%>
           </div>
