@@ -1,11 +1,15 @@
 <div id="form">
   <div class="wrapper_skinny">
     <%= form_for ([@user, @document]) do |f| %>
-      <% @document.errors.full_messages.each do |message|%>
-        <div id="notice_wrapper_form">
-          <p class="notice"><%= message %></p>
-        </div>
-      <%end%>
+    <% if @document.errors.any? %>
+        <% @document.errors.messages.values.each do |msg|%>
+            <%msg.each do |m|%>
+            <div id="notice_wrapper_form">
+              <p class="notice"> <%= m %></p>
+            </div>
+            <%end%>
+        <%end%>
+    <% end %>
       <div class="field">
         <%= f.text_field :title, placeholder:"Titulo del pdf"%>
       </div>
