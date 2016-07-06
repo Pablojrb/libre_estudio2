@@ -6,7 +6,7 @@
     <% end %>
       <nav class="navu">
         <ul>
-          <li><%= link_to "EXPLORA", "#", class:"nav_button"%></li>
+          <li> <%= link_to "EXPLORA", users_path, class:"nav_button"%></li>
           <li> <%= link_to "LOG OUT", destroy_user_session_path, method: :delete, class:"nav_button"%></li>
         </ul>
       </nav>
@@ -36,7 +36,7 @@
       <span class="colorgray">/</span>
       <li><%= link_to "Subir Documento",  new_user_document_path( @user ) %></li>
       <span class="colorgray">/</span>
-      <li><a href="#" class="current">Account Settings</a></li>
+      <li><a href="#" class="current">Editar Cuenta</a></li>
     </ul>
   </div>
 
