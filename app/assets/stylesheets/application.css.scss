@@ -39,7 +39,34 @@ body{
     color: white;
   }
 }
+.votesuser{
 
+  height: 16px;
+  font-size:.85rem;
+  span{
+    margin-right: .85rem;
+    vertical-align: 4px;
+    margin-left: .85rem;
+  }
+  .upvotes{
+    background-image: image-url("thumbs-up.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+
+  }
+  .downvotes{
+    background-image: image-url("thumbs-down.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+
+  }
+}
 
 .colorgray{
   color: $lgray;
@@ -448,6 +475,7 @@ textarea{
 #unlikevotes{
   float: right;
 }
+
 #sadface{
 
   opacity: .12;

@@ -29,6 +29,11 @@
     <div class="user_overview">
           <p>
             <%= @user.name%> <%= @user.last_name%>
+            <div class="votesuser">
+              <svg class="upvotes"></svg><span><%=@user.get_upvotes.size%></span>
+              <span>/</span>
+              <svg class="downvotes"></svg><span><%=@user.get_downvotes.size%></span>
+            </div>
           </p>
           <% unless @user.facebook.blank?%>
             <a href="<%= @user.facebook%>" class="button_edit" target="_blank">Facebook</a>

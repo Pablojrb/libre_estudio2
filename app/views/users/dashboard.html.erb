@@ -18,16 +18,19 @@
   </div>
   <div class="user_overview">
       <p>
-        <%= @user.name%> <%= @user.last_name%>
+        <%= @user.name%> <%= @user.last_name%> <br>
+        <div class="votesuser">
+          <svg class="upvotes"></svg><span><%=current_user.get_upvotes.size%></span>
+          <span>/</span>
+          <svg class="downvotes"></svg><span><%=current_user.get_downvotes.size%></span>
+        </div>
       </p>
-
-          <%unless @user.facebook.blank?%>
-            <a href="<%=@user.facebook%>", class=" button_edit" target="_blank">Facebook</a>
-          <%end%>
-          <%unless @user.instagram.blank?%>
-            <a href="<%=@user.instagram%>", class=" button_edit" target="_blank">Instagram</a>
-          <%end%>
-
+      <%unless @user.facebook.blank?%>
+        <a href="<%=@user.facebook%>", class=" button_edit" target="_blank">Facebook</a>
+      <%end%>
+      <%unless @user.instagram.blank?%>
+        <a href="<%=@user.instagram%>", class=" button_edit" target="_blank">Instagram</a>
+      <%end%>
   </div>
 </div>
 <div id="links">
