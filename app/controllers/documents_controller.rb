@@ -21,9 +21,10 @@ class DocumentsController < ApplicationController
     @documents = Document.where(user_id: @user).order("created_at DESC").reject { |d| d.id == @document.id }
     @documents = @documents.paginate(:page => params[:page], :per_page => 5)
   end
-  def edit
 
+  def edit
   end
+  
   def update
     if @document.update document_params
       redirect_to user_document_path(@user, @document), notice: "El Documento fue editado con EXITO!"

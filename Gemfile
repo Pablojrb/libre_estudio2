@@ -16,6 +16,7 @@ gem 'will_paginate', '~> 3.1'
 
 
 
+
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'

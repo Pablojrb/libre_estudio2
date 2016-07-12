@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  # require 'will_paginate/array'
+  require 'will_paginate/array'
   before_action :find_user, only: [:show, :dashboard, :upvote, :downvote]
   before_action :find_document, only: [:show, :dashboard]
 
@@ -18,6 +18,7 @@ class UsersController < ApplicationController
 
   def dashboard
   end
+
   #votos
   def upvote
     @user.upvote_from current_user

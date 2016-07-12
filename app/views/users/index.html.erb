@@ -10,7 +10,7 @@
             <li> <%= link_to "LOG IN", new_user_session_path, class:"nav_button"%></li>
 
           <%else%>
-            
+
             <li> <%= link_to "DASHBOARD", root_path, class:"nav_button"%></li>
             <li> <%= link_to "LOG OUT", destroy_user_session_path, method: :delete, class:"nav_button"%></li>
 
@@ -33,32 +33,29 @@
               Documentos:  <%= user.documents.size%>
               </p>
               <% if user_signed_in?%>
-              <div class="votes">
-                <%= link_to like_user_path(user), class:"like", method: :put do %>
-                <svg id="happyface"></svg>
-                <span><%=user.get_upvotes.size%></span>
-                <%end%>
-                <%= link_to unlike_user_path(user), class:"unlike", method: :put do %>
-                <div id="unlikevotes">
-                  <svg id="sadface"></svg>
-                  <span><%=user.get_downvotes.size%></span>
+                <div class="votes">
+                  <%= link_to like_user_path(user), class:"like", method: :put do %>
+                  <svg id="happyface"></svg>
+                  <span><%=user.get_upvotes.size%></span>
+                  <%end%>
+                  <%= link_to unlike_user_path(user), class:"unlike", method: :put do %>
+                  <div id="unlikevotes">
+                    <svg id="sadface"></svg>
+                    <span><%=user.get_downvotes.size%></span>
+                  </div>
+                  <%end%>
                 </div>
-                <%end%>
-              </div>
               <%else%>
-              <div class="votes">
-                <%= link_to "#", class:"like" do%>
-                <svg id="happyface"></svg>
-                <span><%=user.get_upvotes.size%></span>
-                <%end%>
-                <%= link_to "#", class:"unlike" do %>
-
-                <div id="unlikevotes">
-                  <svg id="sadface"></svg>
-                  <span><%=user.get_downvotes.size%></span>
+                <div class="votes">
+                  <div class="like ">
+                    <svg id="happyface" class="no_click"></svg>
+                    <span><%=user.get_upvotes.size%></span>
+                  </div>
+                  <div class="unlike ">
+                    <svg id="sadface" class="no_click"></svg>
+                    <span><%=user.get_downvotes.size%></span>
+                  </div>
                 </div>
-                <%end%>
-              </div>
               <%end%>
             </div>
           </li>

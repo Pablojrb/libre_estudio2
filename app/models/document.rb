@@ -1,7 +1,7 @@
 class Document < ActiveRecord::Base
   belongs_to :user
 
-   after_validation :clean_paperclip_errors
+  after_validation :clean_paperclip_errors
 
   validates :title,
           :presence => {:message => "El titulo no puede estar en blanco" },

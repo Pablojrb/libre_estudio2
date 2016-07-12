@@ -442,10 +442,28 @@ textarea{
   margin: 0 auto;
 }
 .votes{
-
   border-top: 1px solid lighten($lgray, 15%);
   padding-top: 1rem;
   margin-top: 1rem;
+  .unlike{
+
+    display: inline-block;
+    float: right;
+    #sadface{
+      opacity: .12;
+      background-image: image-url("thumbs-down.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: inline-block;
+      width: 1.75rem;
+      height: 1.75rem;
+      transition: opacity .2s ease-in-out;
+      &:hover{
+        opacity: .20;
+      }
+    }
+  }
   span{
     color: $lgray;
     font-size: .85rem;
@@ -472,27 +490,12 @@ textarea{
     }
   }
 }
-#unlikevotes{
-  float: right;
+.no_click{
+  pointer-events: false;
 }
 
-#sadface{
 
-  opacity: .12;
-  background-image: image-url("thumbs-down.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: inline-block;
-  width: 1.75rem;
-  height: 1.75rem;
-  transition: opacity .2s ease-in-out;
-  &:hover{
-    opacity: .20;
 
-  }
-
-}
 @import "normalize";
 @import "welcome";
 @import "users";
