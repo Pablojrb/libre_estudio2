@@ -318,7 +318,7 @@ body{
     background: $bluebutton;
     color: $white;
   }
-  .disiable{
+  .disabled{
     color: #c0c0c0;
     &:hover{
       background: #EDEFF5;
@@ -491,7 +491,7 @@ textarea{
   }
 }
 .no_click{
-  pointer-events: false;
+  pointer-events: none;
 }
 
 
