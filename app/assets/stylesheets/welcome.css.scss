@@ -62,8 +62,6 @@
 }
 .button_home{
   display: inline-block;
-  // min-width: 11.5rem;
-  // margin: 5rem auto 0rem auto;
   margin: 5rem 1rem 0 2rem;
 
 }
@@ -71,11 +69,49 @@
 
 
 
+@media screen and (max-width:935px){
+  #logo_wrapper{
+    width: 200px;
+    height: 200px;
+    margin: 7rem 0 2rem 0;
+    display: inline;
+    background-image: image-url("logobg.png");
+    background-size: cover;
+    background-position: center;
+    float: right;
+  }
+}
 
 @media screen and (max-width:1048px){
   #contenido{
     h1{
-      color:white;
+      font-size: 2rem;
+    }
+    #desproyecto{
+      font-size: .8rem;
+    }
+  }
+}
+@media screen and (max-width:320px){
+
+
+  .button_home{
+    display: inline-block;
+    margin: 1rem 2rem;
+
+  }
+  #logo_wrapper{
+    display: none;
+  }
+  #contenido{
+    h1{
+      margin-top: 20px;
+      text-align: center;
+      font-size: 2.3rem;
+    }
+    #desproyecto{
+      font-size: .75rem;
+      text-align: center;
     }
   }
 }
