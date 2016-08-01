@@ -494,6 +494,7 @@ textarea{
   pointer-events: none;
 }
 //mobile nav
+
 .mobile-nav{
   display: none;
   margin: 0 auto;
@@ -556,12 +557,12 @@ textarea{
     }
     span:after{
       top: -14px;
-
     }
     &.is-open span{
       background: transparent;
     }
-    &.is-open span:before,&.is-open span:after{
+    &.is-open span:before,
+    &.is-open span:after{
       transform-origin: center;
       transform: rotate(47deg);
       top:0
@@ -590,7 +591,8 @@ textarea{
     .navu{
       display: none;
     }
-    .mobile-nav,.is-open{
+
+    .mobile-nav.is-open{
       display: block;
       transform: translateY(100%);
     }
