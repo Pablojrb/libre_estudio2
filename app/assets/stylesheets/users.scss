@@ -61,6 +61,19 @@
   }
 
 }
+
+@media screen and (max-width:474px){
+
+  #documento {
+
+    ul {
+
+      li {
+        width: 48%;
+      }
+    }
+  }
+}
 @media screen and (max-width:320px){
 
   #documento {

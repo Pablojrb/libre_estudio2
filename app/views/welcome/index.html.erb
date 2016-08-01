@@ -1,4 +1,13 @@
 <div class="wrapper_wide" id="homec">
+  <div class="mobile-nav">
+    <nav class="navum">
+      <ul>
+        <% unless user_signed_in? %>
+          <li><%= link_to "LOG IN", new_user_session_path, class:"nav_button" %></li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
 <header class="cf">
     <a href="#" id="logo"> <span class="textodelgado">LIBRE</span> ESTUDIO</a>
       <nav class="navu">
@@ -8,7 +17,9 @@
           <% end %>
         </ul>
       </nav>
-
+  <div class="mobile-nav-t">
+    <span></span>
+  </div>
 </header>
 </div>
 <div class="wrapper_wide">

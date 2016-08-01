@@ -496,12 +496,12 @@ textarea{
 //mobile nav
 
 .mobile-nav{
-  display: none;
+  display: block;;
   margin: 0 auto;
   padding: 25px 0 25px;
   position: absolute;
   width:95%;
-  // background: pink;
+
   transform: translateY(-100%);
   transition: all 0.3s ease-in-out;
 
@@ -596,6 +596,7 @@ textarea{
       display: block;
       transform: translateY(100%);
     }
+
     #logo{
         font-size: 0.8rem;
     }
