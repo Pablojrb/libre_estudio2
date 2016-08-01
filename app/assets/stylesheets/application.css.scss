@@ -493,7 +493,116 @@ textarea{
 .no_click{
   pointer-events: none;
 }
+//mobile nav
+.mobile-nav{
+  display: none;
+  margin: 0 auto;
+  padding: 25px 0 25px;
+  position: absolute;
+  width:95%;
+  // background: pink;
+  transform: translateY(-100%);
+  transition: all 0.3s ease-in-out;
 
+  .navum{
+
+    ul{
+
+      list-style: none;
+      margin: 0;
+      li{
+        display: inline-block;
+        a{
+
+          font-weight: 600;
+          text-decoration: none;
+          color: $lgray;
+          font-size: .6rem;
+          padding: .35rem .65rem;
+          border-radius: 12%;
+          border: 2px solid $lgray;
+          transition: background .2s ease-in-out;
+
+          &:hover{
+            color:$white;
+            background-color: $lgraya;
+          }
+        }
+      }
+    }
+  }
+
+}
+.mobile-nav-t{
+  cursor: pointer;
+  margin-top: -15px;
+  width: 50px;
+  height: 50px;
+  float: right;
+  // background: pink;
+  display: none;
+  align-items: center;
+    span, span:before, span:after{
+      content: " ";
+      display: block;
+      height: 2px;
+      width: 100%;
+      background:  #333;
+      position: relative;
+      transition: all 0.3s ease-in-out;
+    }
+    span:before{
+      top: 12px;
+    }
+    span:after{
+      top: -14px;
+
+    }
+    &.is-open span{
+      background: transparent;
+    }
+    &.is-open span:before,&.is-open span:after{
+      transform-origin: center;
+      transform: rotate(47deg);
+      top:0
+    }
+    &.is-open span:after{
+      transform: rotate(-47deg);
+
+    }
+
+
+}
+// media queries
+@media screen and (max-width:320px){
+
+  .banner{
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 10%;
+      height: 250px;
+      -webkit-box-shadow: 0px 6px 15px 1px rgba(0,0,0,0.5);
+      -moz-box-shadow: 0px 6px 15px 1px rgba(0,0,0,0.5);
+      box-shadow: 0px 6px 15px 1px rgba(0, 0, 0, 0.5);
+      margin-bottom: 2rem;
+
+  }
+    .navu{
+      display: none;
+    }
+    .mobile-nav,.is-open{
+      display: block;
+      transform: translateY(100%);
+    }
+    #logo{
+        font-size: 0.8rem;
+    }
+    .mobile-nav-t{
+      display: flex;
+    }
+
+
+}
 
 @import "normalize";
 @import "welcome";
