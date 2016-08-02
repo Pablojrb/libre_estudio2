@@ -24,13 +24,11 @@
         $(this).remove();
       })
     },2500);
-    $('.mobile-nav-t').click(function(){
+
+    $('.mobile-nav-t').on ('click',function(){
       $('.mobile-nav').toggleClass('is-open');
       $('.mobile-nav-t').toggleClass('is-open');
-
-      console.log("funciono");
     });
-
   });
 
 })(jQuery);
