@@ -287,6 +287,11 @@ body{
     background-color: rgb(65, 69, 74);
   }
 }
+.redes{
+  margin: 14rem 0rem 0rem 22rem;
+  position: absolute;
+
+}
 .user_overview{
   margin: 9rem 0rem 0rem 22rem;
   position: absolute;
@@ -624,7 +629,14 @@ textarea{
 }
 
 ////mediaqueria user overview
+@media screen and (max-width:700px){
+  .redes{
+    margin: 14rem 0rem 0rem 15rem;
+    position: absolute;
 
+  }
+
+}
 @media screen and (max-width:857px){
 
   .avatar{
@@ -658,7 +670,12 @@ textarea{
   }
   .user_overview{
     text-align: center;
-    margin: 9rem 0rem 0rem 130px;
+    margin: 9rem 0rem 0rem 185px;
+
+  }
+  .redes{
+    margin: 14rem 0rem 0rem 8rem;
+    position: absolute;
 
   }
 }
@@ -676,7 +693,12 @@ textarea{
   }
   .user_overview{
     text-align: center;
-    margin: 9rem 0rem 0rem 67px;
+    margin: 9rem 0rem 0rem 125px;
+
+  }
+  .redes{
+    margin: 14rem 0rem 0rem 4.3rem;
+    position: absolute;
 
   }
 }
@@ -696,7 +718,7 @@ textarea{
   }
   .user_overview{
     text-align: center;
-    margin: 9rem 0rem 0rem 20px;
+    margin: 9rem 0rem 0rem 75px;
     p{
       font-size: .7rem;
       margin-bottom: 0;
@@ -734,6 +756,11 @@ textarea{
     margin: 0 auto !important;
 
     min-width: 4.5rem;
+  }
+  .redes{
+    margin: 14rem 0rem 0rem 1.3rem;
+    position: absolute;
+
   }
 
 }
