@@ -25,10 +25,14 @@
       })
     },2500);
 
-    $('.mobile-nav-t').on ('click',function(){
-      $('.mobile-nav').toggleClass('is-open');
-      $('.mobile-nav-t').toggleClass('is-open');
-    });
+    // $('.mobile-nav-t').on ('click',function(){
+    //
+    //   $('.mobile-nav').toggleClass('is-open');
+    //   $('.mobile-nav-t').toggleClass('is-open');
+    //
+    // });
+
+
   });
 
 })(jQuery);
