@@ -107,6 +107,10 @@ body{
   width: 50%;
   margin: 0 auto;
 }
+.wrapper_skinnym{
+  width: 50%;
+  margin: 0 auto;
+}
 .cf:before, .cf:after{
   content: " ";
   display: table;
@@ -575,7 +579,7 @@ textarea{
 
 }
 // media queries
-@media screen and (max-width:320px){
+@media screen and (max-width:587px){
 
   .banner{
       background-repeat: no-repeat;
@@ -606,6 +610,137 @@ textarea{
 
 
 }
+////media querias dahsborad
+
+@media screen and (max-width:857px){
+
+    .wrapper_skinnym{
+      width: 85%;
+      margin: 0 auto;
+      ul{
+        text-align: center;
+      }
+    }
+}
+
+////mediaqueria user overview
+
+@media screen and (max-width:857px){
+
+  .avatar{
+
+    img{
+      width: 186px;
+      height: 186px;
+      margin-left: 2rem;
+      margin-top: 6rem;
+    }
+  }
+  .user_overview{
+    margin: 9rem 0rem 0rem 15rem;
+
+  }
+}
+
+@media screen and (max-width:582px){
+  #links{
+    margin-bottom: 0;
+  }
+
+  .avatar{
+
+    img{
+      width: 140px;
+     height: 140px;
+     margin-left: 228px;
+     margin-top: -5px;
+    }
+  }
+  .user_overview{
+    text-align: center;
+    margin: 9rem 0rem 0rem 130px;
+
+  }
+}
+@media screen and (max-width:482px){
+
+
+  .avatar{
+
+    img{
+      width: 140px;
+     height: 140px;
+     margin-left: 165px;
+     margin-top: -5px;
+    }
+  }
+  .user_overview{
+    text-align: center;
+    margin: 9rem 0rem 0rem 67px;
+
+  }
+}
+@media screen and (max-width:320px){
+
+  .des_documento{
+    font-size: .45rem;
+  }
+  .avatar{
+
+    img{
+      width: 140px;
+     height: 140px;
+     margin-left: 95px;
+     margin-top: -5px;
+    }
+  }
+  .user_overview{
+    text-align: center;
+    margin: 9rem 0rem 0rem 20px;
+    p{
+      font-size: .7rem;
+      margin-bottom: 0;
+      margin-top: 0;
+
+    }
+
+  }
+  .votesuser{
+    margin-top: .65rem;
+    margin-bottom: .65rem;
+    span{
+      margin-right: .6rem;
+      margin-left: .6rem;
+    }
+    .upvotes{
+
+      width: 15px;
+      height: 15px;
+
+    }
+    .downvotes{
+
+      width: 15px;
+      height: 15px;
+
+    }
+  }
+  .button_edit{
+    font-size: .65rem;
+    padding: .7rem 2rem;
+    border-radius: 2rem;;
+    width: 2rem;
+    display: inline-block;
+    margin: 0 auto !important;
+
+    min-width: 4.5rem;
+  }
+
+}
+
+
+
+
 
 @import "normalize";
 @import "welcome";

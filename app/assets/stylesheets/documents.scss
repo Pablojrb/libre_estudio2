@@ -52,11 +52,7 @@
         height: 202px;
         float: left;
 
-        img{
-          width: 15rem;
-          max-width: 100%;
 
-        }
       }
       .documento_overview{
         width: 70%;
@@ -88,4 +84,84 @@
       }
     }
   }
+}
+///medai queris documentos
+@media screen and (max-width:546px){
+
+    #links{
+      margin-bottom: 1rem;
+    }
+    #documentos{
+      padding: 1rem 0;
+      .wrapper_skinnym{
+        ul{
+          li{
+            .documento_thumbnail
+            {
+              width: 28%;
+              height: 170px;
+            }
+          }
+        }
+
+      }
+  }
+}
+@media screen and (max-width:503px){
+
+    #links{
+      ul{
+        li{
+          margin: .5rem;
+          a{
+            font-size: .65rem;
+          }
+        }
+      }
+    }
+  .documento_overview{
+    h2{
+      font-size: 1.3rem;
+    }
+
+  }
+}
+
+@media screen and (max-width:320px){
+
+  .wrapper_skinnym{
+    width: 100%;
+    margin: 0 auto;
+  }
+  #links{
+
+    span{
+      margin: 0;
+    }
+  }
+  #documentos{
+
+    padding: .6rem 0;
+
+    .wrapper_skinnym{
+      ul{
+        h2{
+          font-size: 1rem;
+          text-decoration: underline;
+
+        }
+
+
+        li{
+          .documento_thumbnail
+          {
+            width: 28%;
+            height: 130px;
+          }
+        }
+      }
+
+    }
+  }
+
 }
