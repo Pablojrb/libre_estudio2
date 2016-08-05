@@ -103,6 +103,10 @@ body{
   width: 80%;
   margin: 0 auto;
 }
+.wrapperm {
+  width: 80%;
+  margin: 0 auto;
+}
 .wrapper_skinny{
   width: 50%;
   margin: 0 auto;
@@ -702,11 +706,24 @@ textarea{
 
   }
 }
+@media screen and (max-width:915px){
+
+  #breadcrumb{
+    margin-bottom: .75rem;
+
+  }
+  #documentos{
+    .wrapper_skinny{
+      width: 85%;
+
+    }
+  }
+
+}
+
 @media screen and (max-width:320px){
 
-  .des_documento{
-    font-size: .45rem;
-  }
+
   .avatar{
 
     img{
@@ -748,14 +765,14 @@ textarea{
     }
   }
   .button_edit{
-    font-size: .65rem;
-    padding: .7rem 2rem;
+    font-size: .45rem;
+    padding: .4rem 1.5rem;
     border-radius: 2rem;;
-    width: 2rem;
+    width: 1.3rem;
     display: inline-block;
     margin: 0 auto !important;
 
-    min-width: 4.5rem;
+    min-width: 2.5rem;
   }
   .redes{
     margin: 14rem 0rem 0rem 1.3rem;

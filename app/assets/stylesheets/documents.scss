@@ -93,7 +93,7 @@
     }
     #documentos{
       padding: 1rem 0;
-      .wrapper_skinnym{
+      .wrapper_skinny{
         ul{
           li{
             .documento_thumbnail
@@ -128,11 +128,16 @@
 }
 
 @media screen and (max-width:320px){
-
-  .wrapper_skinnym{
-    width: 100%;
+  .wrapperm{
+    width: 95%;
     margin: 0 auto;
   }
+  #breadcrumb{
+    a{
+      font-size: .65rem;
+    }
+  }
+
   #links{
 
     span{
@@ -143,15 +148,14 @@
 
     padding: .6rem 0;
 
-    .wrapper_skinnym{
+    .wrapper_skinny{
+      width: 100%;
+      margin: 0 auto;
       ul{
         h2{
           font-size: 1rem;
           text-decoration: underline;
-
         }
-
-
         li{
           .documento_thumbnail
           {
