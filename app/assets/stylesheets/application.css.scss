@@ -722,11 +722,31 @@ textarea{
 }
 
 @media screen and (max-width:320px){
+
+  .wrapper_skinny{
+    width: 100%;
+    .field{
+      min-width: 95%;
+
+
+    }
+  }
+  .hr{
+    color: $lgray;
+    font-size: .8rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    span {
+
+    display: none;
+
+    }
+
+  }
+
   #unidades, .wrapper{
     width: 100%;
-    .wrapper_skinny{
-      width: 100%;
-    }
+
     h1{
       font-size: 1.2rem;
     }
@@ -788,6 +808,7 @@ textarea{
     position: absolute;
 
   }
+
 
 }
 
