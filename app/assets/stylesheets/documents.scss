@@ -131,10 +131,15 @@
   .wrapperm{
     width: 95%;
     margin: 0 auto;
+
   }
   #breadcrumb{
     a{
       font-size: .65rem;
+    }
+    span{
+      margin-left:  1px;
+      margin-right: 1px;
     }
   }
 

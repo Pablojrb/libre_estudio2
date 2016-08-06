@@ -722,7 +722,16 @@ textarea{
 }
 
 @media screen and (max-width:320px){
+  #unidades, .wrapper{
+    width: 100%;
+    .wrapper_skinny{
+      width: 100%;
+    }
+    h1{
+      font-size: 1.2rem;
+    }
 
+  }
 
   .avatar{
 
