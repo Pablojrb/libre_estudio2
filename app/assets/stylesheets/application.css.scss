@@ -721,7 +721,97 @@ textarea{
 
 }
 
-@media screen and (max-width:320px) and (max-width: 480px) {
+@media screen and (max-width:320px){
+
+  .wrapper_skinny{
+    width: 100%;
+    .field{
+      min-width: 95%;
+
+
+    }
+  }
+  .hr{
+    color: $lgray;
+    font-size: .8rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    span {
+
+    display: none;
+
+    }
+
+  }
+
+  #unidades, .wrapper{
+    width: 100%;
+
+    h1{
+      font-size: 1.2rem;
+    }
+
+  }
+
+  .avatar{
+
+    img{
+      width: 140px;
+     height: 140px;
+     margin-left: 95px;
+     margin-top: -5px;
+    }
+  }
+  .user_overview{
+    text-align: center;
+    margin: 9rem 0rem 0rem 75px;
+    p{
+      font-size: .7rem;
+      margin-bottom: 0;
+      margin-top: 0;
+
+    }
+
+  }
+  .votesuser{
+    margin-top: .65rem;
+    margin-bottom: .65rem;
+    span{
+      margin-right: .6rem;
+      margin-left: .6rem;
+    }
+    .upvotes{
+
+      width: 15px;
+      height: 15px;
+
+    }
+    .downvotes{
+
+      width: 15px;
+      height: 15px;
+
+    }
+  }
+  .button_edit{
+    font-size: .45rem;
+    padding: .4rem 1.5rem;
+    border-radius: 2rem;;
+    width: 1.3rem;
+    display: inline-block;
+    margin: 0 auto !important;
+
+    min-width: 2.5rem;
+  }
+  .redes{
+    margin: 14rem 0rem 0rem 1.3rem;
+    position: absolute;
+
+  }
+
+
+}
+@media screen and (max-width:420px){
 
   .wrapper_skinny{
     width: 100%;

@@ -127,7 +127,55 @@
   }
 }
 
-@media screen and (max-width:320px) and (max-width: 480px){
+@media screen and (max-width:320px){
+  .wrapperm{
+    width: 95%;
+    margin: 0 auto;
+
+  }
+  #breadcrumb{
+    a{
+      font-size: .65rem;
+    }
+    span{
+      margin-left:  1px;
+      margin-right: 1px;
+    }
+  }
+
+  #links{
+
+    span{
+      margin: 0;
+    }
+  }
+  #documentos{
+
+    padding: .6rem 0;
+
+    .wrapper_skinny{
+      width: 100%;
+      margin: 0 auto;
+      ul{
+        h2{
+          font-size: 1rem;
+          text-decoration: underline;
+        }
+        li{
+          .documento_thumbnail
+          {
+            width: 28%;
+            height: 130px;
+          }
+        }
+      }
+
+    }
+  }
+
+}
+
+@media screen and (max-width:420px){
   .wrapperm{
     width: 95%;
     margin: 0 auto;
